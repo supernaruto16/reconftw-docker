@@ -1,0 +1,18 @@
+version: "3"
+services:
+  app:
+    container_name: reconftw
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    tty: true
+    environment:
+      - COLLAB_SERVER='XXXXXXXXXX'
+      - XSS_SERVER=''
+      - SHODAN_API_KEY=''
+    volumes:
+      - ./github_tokens.txt:/root/Tools/.github_tokens
+      - ./subfinder_config.yaml:/root/.config/subfinder/config.yaml
+      - ./amass_config.ini:/root/.config/amass/config.ini
+      - ./notify.conf:/root/.config/notify/notify.conf
+      - ./output:/root/Tools/reconftw/Recon
