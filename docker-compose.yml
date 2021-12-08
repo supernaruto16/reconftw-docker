@@ -16,5 +16,6 @@ services:
       - ./amass_config.ini:/root/.config/amass/config.ini
       - ./notify.conf:/root/.config/notify/notify.conf
       - ./output:/root/Tools/reconftw/Recon
-      - ./update.sh:/root/Tools/reconftw/
+      - ./update.sh:/root/Tools/reconftw/update.sh
+
 
